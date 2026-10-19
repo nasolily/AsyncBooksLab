@@ -36,9 +36,10 @@
             lstReport = new ListBox();
             label1 = new Label();
             label2 = new Label();
-            textBox1 = new TextBox();
+            txtFile2 = new TextBox();
             lstReport2 = new ListBox();
-            button1 = new Button();
+            btnBrowse2 = new Button();
+            openFileDialog2 = new OpenFileDialog();
             SuspendLayout();
             // 
             // btnSubmit
@@ -108,12 +109,12 @@
             label2.TabIndex = 6;
             label2.Text = "Book 2";
             // 
-            // textBox1
+            // txtFile2
             // 
-            textBox1.Location = new Point(662, 62);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(288, 31);
-            textBox1.TabIndex = 7;
+            txtFile2.Location = new Point(662, 62);
+            txtFile2.Name = "txtFile2";
+            txtFile2.Size = new Size(288, 31);
+            txtFile2.TabIndex = 7;
             // 
             // lstReport2
             // 
@@ -123,23 +124,28 @@
             lstReport2.Size = new Size(288, 254);
             lstReport2.TabIndex = 8;
             // 
-            // button1
+            // btnBrowse2
             // 
-            button1.Location = new Point(978, 60);
-            button1.Name = "button1";
-            button1.Size = new Size(112, 34);
-            button1.TabIndex = 9;
-            button1.Text = "Browse";
-            button1.UseVisualStyleBackColor = true;
+            btnBrowse2.Location = new Point(978, 60);
+            btnBrowse2.Name = "btnBrowse2";
+            btnBrowse2.Size = new Size(112, 34);
+            btnBrowse2.TabIndex = 9;
+            btnBrowse2.Text = "Browse";
+            btnBrowse2.UseVisualStyleBackColor = true;
+            btnBrowse2.Click += btnBrowse2_Click;
+            // 
+            // openFileDialog2
+            // 
+            openFileDialog2.FileName = "openFileDialog2";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1122, 511);
-            Controls.Add(button1);
+            Controls.Add(btnBrowse2);
             Controls.Add(lstReport2);
-            Controls.Add(textBox1);
+            Controls.Add(txtFile2);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(lstReport);
@@ -148,7 +154,7 @@
             Controls.Add(btnBrowse);
             Controls.Add(btnSubmit);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Top 10 Words Finder";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -164,8 +170,9 @@
         private ListBox lstReport;
         private Label label1;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox txtFile2;
         private ListBox lstReport2;
-        private Button button1;
+        private Button btnBrowse2;
+        private OpenFileDialog openFileDialog2;
     }
 }
